@@ -1,0 +1,9 @@
+node_modules
+dist
+.output
+.tanstack
+*.db
+*.db-journal
+.env
+.env.local
+.vercel

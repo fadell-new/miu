@@ -1,0 +1,383 @@
+@import "tailwindcss";
+@source "../src";
+
+.miu {
+  --miu-bg: #f7f8f3;
+  --miu-ink: #16233a;
+  --miu-muted: #5c6675;
+  --miu-accent: #2447d6;
+  --miu-line: #dde2d8;
+  --miu-card: #ffffff;
+  background: var(--miu-bg);
+  color: var(--miu-ink);
+  font-family: Outfit, system-ui, sans-serif;
+  min-height: 100dvh;
+}
+.miu-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 64px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--miu-line);
+  position: sticky;
+  top: 0;
+  background: var(--miu-bg);
+  z-index: 20;
+}
+.miu-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  color: var(--miu-ink);
+  text-decoration: none;
+}
+.miu-links {
+  display: flex;
+  gap: 16px;
+}
+.miu-links a {
+  color: var(--miu-ink);
+  text-decoration: none;
+  font-size: 14px;
+}
+.miu-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.miu-balance {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  border: 1px solid var(--miu-line);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--miu-card);
+}
+.miu-toggle {
+  border: 1px solid var(--miu-ink);
+  background: transparent;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.miu-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  padding: 48px 20px 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.miu-hero h1 {
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 8px 0 10px;
+}
+.miu-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--miu-muted);
+}
+.miu-sub {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 46ch;
+  color: var(--miu-ink);
+}
+.miu-cta-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.miu-cta-a {
+  background: var(--miu-accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid var(--miu-accent);
+  transition: transform 160ms ease;
+}
+.miu-cta-a:hover {
+  transform: translateX(2px);
+}
+.miu-cta-a:active {
+  transform: scale(0.98);
+}
+.miu-cta-b {
+  background: transparent;
+  color: var(--miu-ink);
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1.5px solid var(--miu-ink);
+}
+.miu-cta-b:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.miu-cta-c {
+  background: var(--miu-ink);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: 1px solid var(--miu-ink);
+  cursor: pointer;
+  margin-top: 8px;
+  transition: transform 160ms ease;
+}
+.miu-cta-c:hover {
+  transform: rotate(-1deg) translateY(-1px);
+}
+.miu-cta-d {
+  background: #eef1ff;
+  color: var(--miu-accent);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px dashed var(--miu-accent);
+  cursor: pointer;
+  margin-top: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+.miu-note {
+  font-size: 13px;
+  color: var(--miu-muted);
+  margin-top: 10px;
+}
+.miu-hero-card {
+  border: 1px solid var(--miu-line);
+  border-radius: 16px;
+  background: var(--miu-card);
+  padding: 14px;
+  overflow: hidden;
+}
+.miu-hero-head {
+  font-size: 13px;
+  color: var(--miu-muted);
+  margin-bottom: 8px;
+}
+.miu-strip {
+  overflow: hidden;
+  border: 1px solid var(--miu-line);
+  border-radius: 12px;
+  background: var(--miu-bg);
+}
+.miu-strip-inner {
+  display: flex;
+  gap: 18px;
+  padding: 10px 12px;
+  white-space: nowrap;
+  animation: miu-slide 18s linear infinite;
+}
+.miu-paused .miu-strip-inner {
+  animation: none;
+}
+.miu-tick {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+}
+.miu-top3 {
+  margin-top: 10px;
+  display: grid;
+  gap: 6px;
+}
+.miu-top3-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  border-top: 1px solid var(--miu-line);
+  padding-top: 6px;
+}
+.miu-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+.miu-section h2 {
+  font-size: clamp(24px, 3vw, 34px);
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+.miu-hscroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+.miu-sym {
+  min-width: 170px;
+  text-align: left;
+  border: 1px solid var(--miu-line);
+  background: var(--miu-card);
+  border-radius: 14px;
+  padding: 12px;
+  cursor: pointer;
+  display: grid;
+  gap: 2px;
+  color: var(--miu-ink);
+}
+.miu-sym-on {
+  border-color: var(--miu-accent);
+  box-shadow: 0 0 0 2px rgba(36, 71, 214, 0.15);
+}
+.miu-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+}
+.miu-label {
+  display: block;
+  font-size: 13px;
+  margin: 10px 0 4px;
+}
+.miu-input {
+  width: 100%;
+  border: 1px solid var(--miu-line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background: #fff;
+  color: var(--miu-ink);
+}
+.miu-grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.miu-port {
+  border: 1px solid var(--miu-line);
+  border-radius: 16px;
+  background: var(--miu-card);
+  padding: 14px;
+}
+.miu-prow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid var(--miu-line);
+  font-size: 14px;
+}
+.miu-up {
+  color: #1d6f5c;
+  font-family: "IBM Plex Mono", monospace;
+}
+.miu-down {
+  color: #b33838;
+  font-family: "IBM Plex Mono", monospace;
+}
+.miu-auth {
+  margin-top: 16px;
+  border-top: 1px solid var(--miu-line);
+  padding-top: 12px;
+}
+.miu-rankgrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.miu-rank {
+  border: 1px solid var(--miu-line);
+  background: var(--miu-card);
+  border-radius: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 4px;
+}
+.miu-rank small {
+  color: var(--miu-muted);
+}
+.miu-bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.miu-cell {
+  border: 1px solid var(--miu-line);
+  background: var(--miu-card);
+  border-radius: 16px;
+  padding: 14px;
+}
+.miu-mini {
+  border: 1px solid var(--miu-ink);
+  background: #fff;
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.miu-list {
+  border: 1px solid var(--miu-line);
+  border-radius: 16px;
+  background: var(--miu-card);
+  overflow: hidden;
+}
+.miu-lrow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-top: 1px solid var(--miu-line);
+  font-size: 14px;
+}
+.miu-lrow:first-child {
+  border-top: 0;
+}
+.miu-footer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--miu-muted);
+}
+@keyframes miu-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-30%);
+  }
+}
+.miu-calm .miu-strip-inner {
+  animation: none;
+}
+@media (max-width: 860px) {
+  .miu-hero,
+  .miu-split {
+    grid-template-columns: 1fr;
+  }
+  .miu-rankgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .miu-bento {
+    grid-template-columns: 1fr;
+  }
+  .miu-links {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .miu-strip-inner {
+    animation: none;
+  }
+  .miu-cta-a,
+  .miu-cta-c {
+    transition: none;
+  }
+}
