@@ -2,6 +2,7 @@ import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanst
 import type { QueryClient } from "@tanstack/react-query";
 import { QueryClientProvider } from "@tanstack/react-query";
 import type { ReactNode } from "react";
+import { MiuProvider } from "../lib/miu-client";
 
 import appCss from "../styles.css?url";
 
@@ -89,7 +90,9 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <MiuProvider>
+        <Outlet />
+      </MiuProvider>
     </QueryClientProvider>
   );
 }

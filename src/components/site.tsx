@@ -1,6 +1,6 @@
 import { Link, useRouter } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { MiuProvider, useMiu } from "@/lib/miu-client";
+import { useMiu } from "@/lib/miu-client";
 
 const LINKS = [
   { to: "/trade", label: "Trade" },
@@ -57,9 +57,5 @@ function Shell({ children }: { children: ReactNode }) {
 }
 
 export function SiteShell({ children }: { children: ReactNode }) {
-  return (
-    <MiuProvider>
-      <Shell>{children}</Shell>
-    </MiuProvider>
-  );
+  return <Shell>{children}</Shell>;
 }
