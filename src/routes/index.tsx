@@ -82,7 +82,7 @@ function Landing() {
               <span
                 key={i}
                 className="miu-candle"
-                style={{ height: c.h * 2, background: c.up ? "#1d6f5c" : "#b33838" }}
+                style={{ height: c.h * 2, background: c.up ? "#22c55e" : "#a855f7" }}
               />
             ))}
           </div>

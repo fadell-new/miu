@@ -34,7 +34,7 @@ function Ranks() {
         )}
         <div className="miu-rankgrid miu-stagger">
           {RANKS.map((r) => (
-            <div key={r.id} className="miu-rank" style={r.id === cur.id && me ? { borderColor: "#2447D6" } : undefined}>
+            <div key={r.id} className="miu-rank" style={r.id === cur.id && me ? { borderColor: "#a855f7" } : undefined}>
               <strong>{r.name}</strong>
               <span>{r.capMiu == null ? "No cap" : `${r.capMiu.toLocaleString()} cap`}</span>
               <small>

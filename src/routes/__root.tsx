@@ -43,7 +43,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "MIU Trade League" },
       { name: "description", content: "Paper trading sim with live prices, ranks, shop and PvP duels." },
-      { name: "theme-color", content: "#2447D6" },
+      { name: "theme-color", content: "#0d1117" },
       { property: "og:title", content: "MIU Trade League" },
       { property: "og:description", content: "Paper trading sim with live prices, ranks, shop and PvP duels." },
       { property: "og:type", content: "website" },
