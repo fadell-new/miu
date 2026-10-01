@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 
-const SITE_URL = "https://miu-trade.vercel.app";
+const SITE_URL = "https://miu-swart.vercel.app";
 
 function NotFoundComponent() {
   return (

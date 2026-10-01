@@ -23,11 +23,11 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "MIU Trade League" },
       { property: "og:description", content: "Paper trading sim with live prices, ranks, shop and PvP duels." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://miu-trade.vercel.app/og-cover.svg" },
+      { property: "og:image", content: "https://miu-swart.vercel.app/og-cover.svg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://miu-trade.vercel.app/" },
+      { rel: "canonical", href: "https://miu-swart.vercel.app/" },
       { rel: "icon", href: "/favicon.svg" },
       { rel: "apple-touch-icon", href: "/favicon.svg" },
       { rel: "manifest", href: "/site.webmanifest" },
